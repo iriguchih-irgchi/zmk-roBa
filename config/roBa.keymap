@@ -34,6 +34,13 @@
             bindings = <&to 0 &macro_param_1to1 &kp MACRO_PLACEHOLDER>;
             label = "TO_LAYER_0";
         };
+
+        to_layre_7: to_layre_7 {
+            compatible = "zmk,behavior-macro-one-param";
+            #binding-cells = <1>;
+            bindings = <&to 7 &macro_param_1to1 &kp MACRO_PLACEHOLDER>;
+            label = "TO_LAYRE_7";
+        };
     };
 
     behaviors {
@@ -45,6 +52,15 @@
             #binding-cells = <2>;
             tapping-term-ms = <200>;
         };
+
+        lt_to_layer_7: lt_to_layer_7 {
+            compatible = "zmk,behavior-hold-tap";
+            label = "LAYER_TAP_TO_7";
+            bindings = <&mo>, <&to_layre_7>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+        };
     };
 
     keymap {
@@ -52,10 +68,10 @@
 
         default_layer {
             bindings = <
-&kp Q    &kp W             &kp E       &kp R             &kp T                                                  &kp Y        &kp U  &lt 5 I    &kp O    &kp P
-&kp A    &kp S             &kp D       &kp F             &kp G        &kp LC(LG(NUMBER_4))    &kp MINUS         &kp H        &kp J  &kp K      &kp L    &kp SQT
-&kp Z    &kp X             &kp C       &kp V             &kp B        &kp LEFT_SHIFT          &kp LEFT_COMMAND  &kp N        &kp M  &kp COMMA  &kp DOT  &kp SLASH
-&kp TAB  &kp LEFT_CONTROL  &kp LC(UP)  &lt 6 LANGUAGE_1  &lt 2 SPACE  &lt 4 LANGUAGE_2        &kp BACKSPACE     &lt 1 ENTER                             &to 3
+&kp Q    &kp W             &kp E       &kp R                        &kp T                                                                    &kp Y                   &kp U  &lt_to_layer_0 5 I  &kp O    &kp P
+&kp A    &kp S             &kp D       &kp F                        &kp G                   &kp LC(LG(NUMBER_4))           &kp MINUS         &kp H                   &kp J  &kp K               &kp L    &kp SQT
+&kp Z    &kp X             &kp C       &kp V                        &kp B                   &kp LEFT_SHIFT                 &kp LEFT_COMMAND  &kp N                   &kp M  &kp COMMA           &kp DOT  &kp SLASH
+&kp TAB  &kp LEFT_CONTROL  &kp LC(UP)  &lt_to_layer_0 6 LANGUAGE_1  &lt_to_layer_7 2 SPACE  &lt_to_layer_0 4 LANGUAGE_2    &kp BACKSPACE     &lt_to_layer_0 1 ENTER                                      &to 3
             >;
         };
 
@@ -79,10 +95,10 @@
 
         MOUSE {
             bindings = <
-&trans  &trans  &trans  &trans  &trans                    &trans    &trans    &trans    &trans    &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &mkp MB4  &mkp MB1  &mkp MB3  &mkp MB2  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &mkp MB5  &trans    &trans    &trans    &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans                                  &to 0
+&none  &none  &none  &none  &none                  &none     &none     &lt_to_layer_0 5 I  &none     &none
+&none  &none  &none  &none  &none  &none    &none  &mkp MB4  &mkp MB1  &mkp MB3            &mkp MB2  &none
+&none  &none  &none  &none  &none  &none    &none  &mkp MB5  &none     &none               &none     &none
+&none  &none  &none  &none  &none  &none    &none  &none                                             &to 0
             >;
         };
 
@@ -115,10 +131,19 @@
 
         win {
             bindings = <
-&kp Q    &kp W         &kp E             &kp R             &kp T                                              &kp Y        &kp U  &lt 5 I    &kp O    &kp P
-&kp A    &kp S         &kp D             &kp F             &kp G        &kp PRINTSCREEN     &kp MINUS         &kp H        &kp J  &kp K      &kp L    &kp SQT
-&kp Z    &kp X         &kp C             &kp V             &kp B        &kp LEFT_SHIFT      &kp LEFT_CONTROL  &kp N        &kp M  &kp COMMA  &kp DOT  &kp FSLH
-&kp TAB  &kp LEFT_WIN  &kp LA(LEFT_WIN)  &lt 6 LANGUAGE_1  &lt 2 SPACE  &lt 4 LANGUAGE_2    &kp BSPC          &lt 1 ENTER                             &to 3
+&kp Q    &kp W         &kp E             &kp R                        &kp T                                                                    &kp Y                   &kp U  &lt_to_layer_7 5 I  &kp O    &kp P
+&kp A    &kp S         &kp D             &kp F                        &kp G                   &kp PRINTSCREEN                &kp MINUS         &kp H                   &kp J  &kp K               &kp L    &kp SQT
+&kp Z    &kp X         &kp C             &kp V                        &kp B                   &kp LEFT_SHIFT                 &kp LEFT_CONTROL  &kp N                   &kp M  &kp COMMA           &kp DOT  &kp FSLH
+&kp TAB  &kp LEFT_WIN  &kp LA(LEFT_WIN)  &lt_to_layer_7 6 LANGUAGE_1  &lt_to_layer_7 2 SPACE  &lt_to_layer_7 4 LANGUAGE_2    &kp BSPC          &lt_to_layer_7 1 ENTER                                      &to 8
+            >;
+        };
+
+        layer_8 {
+            bindings = <
+&none  &none  &none  &none  &none                  &none     &none     &lt_to_layer_7 5 I  &none     &none
+&none  &none  &none  &none  &none  &none    &none  &mkp MB4  &mkp MB1  &mkp MB3            &mkp MB2  &none
+&none  &none  &none  &none  &none  &none    &none  &mkp MB5  &none     &none               &none     &none
+&none  &none  &none  &none  &none  &none    &none  &none                                             &to 7
             >;
         };
     };
