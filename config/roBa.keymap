@@ -68,10 +68,10 @@
 
         default_layer {
             bindings = <
-&kp Q    &kp W             &kp E       &kp R                        &kp T                                                                    &kp Y                   &kp U  &lt_to_layer_0 5 I  &kp O    &kp P
-&kp A    &kp S             &kp D       &kp F                        &kp G                   &kp LC(LG(NUMBER_4))           &kp MINUS         &kp H                   &kp J  &kp K               &kp L    &kp SQT
-&kp Z    &kp X             &kp C       &kp V                        &kp B                   &kp LEFT_SHIFT                 &kp LEFT_COMMAND  &kp N                   &kp M  &kp COMMA           &kp DOT  &kp SLASH
-&kp TAB  &kp LEFT_CONTROL  &kp LC(UP)  &lt_to_layer_0 6 LANGUAGE_1  &lt_to_layer_7 2 SPACE  &lt_to_layer_0 4 LANGUAGE_2    &kp BACKSPACE     &lt_to_layer_0 1 ENTER                                      &to 3
+&kp Q    &kp W             &kp E       &kp R                        &kp T                                                                    &kp Y                   &kp U  &lt 5 I    &kp O    &kp P
+&kp A    &kp S             &kp D       &kp F                        &kp G                   &kp LC(LG(NUMBER_4))           &kp MINUS         &kp H                   &kp J  &kp K      &kp L    &kp SQT
+&kp Z    &kp X             &kp C       &kp V                        &kp B                   &kp LEFT_SHIFT                 &kp LEFT_COMMAND  &kp N                   &kp M  &kp COMMA  &kp DOT  &kp SLASH
+&kp TAB  &kp LEFT_CONTROL  &kp LC(UP)  &lt_to_layer_0 6 LANGUAGE_1  &lt_to_layer_7 2 SPACE  &lt_to_layer_0 4 LANGUAGE_2    &kp BACKSPACE     &lt_to_layer_0 1 ENTER                             &to 3
             >;
         };
 
@@ -95,10 +95,10 @@
 
         MOUSE {
             bindings = <
-&none  &none  &none  &none  &none                  &none     &none     &lt_to_layer_0 5 I  &none     &none
-&none  &none  &none  &none  &none  &none    &none  &mkp MB4  &mkp MB1  &mkp MB3            &mkp MB2  &none
-&none  &none  &none  &none  &none  &none    &none  &mkp MB5  &none     &none               &none     &none
-&none  &none  &none  &none  &none  &none    &none  &none                                             &to 0
+&none  &none  &none  &none  &none                  &none     &none     &lt 5 I   &none     &none
+&none  &none  &none  &none  &none  &none    &none  &mkp MB4  &mkp MB1  &mkp MB3  &mkp MB2  &none
+&none  &none  &none  &none  &none  &none    &none  &mkp MB5  &none     &none     &none     &none
+&none  &none  &none  &none  &none  &none    &none  &none                                   &to 0
             >;
         };
 
