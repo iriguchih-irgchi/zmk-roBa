@@ -16,29 +16,14 @@
     combos {
         compatible = "zmk,combos";
 
-        tab {
-            bindings = <&kp TAB>;
-            key-positions = <11 12>;
+        ecs {
+            bindings = <&kp ESCAPE>;
+            key-positions = <0 1>;
         };
 
         shift_tab {
             bindings = <&kp LS(TAB)>;
             key-positions = <12 13>;
-        };
-
-        muhennkann {
-            bindings = <&to_layer_0 INT_MUHENKAN>;
-            key-positions = <11 10>;
-        };
-
-        double_quotation {
-            bindings = <&kp DOUBLE_QUOTES>;
-            key-positions = <20 21>;
-        };
-
-        eq {
-            bindings = <&kp EQUAL>;
-            key-positions = <24 25>;
         };
     };
 
@@ -67,10 +52,10 @@
 
         default_layer {
             bindings = <
-&kp Q    &kp W                    &kp E       &kp R                        &kp T                                                         &kp Y        &kp U  &lt 5 I    &kp O    &kp P
-&kp A    &kp S                    &kp D       &kp F                        &kp G        &kp LC(LG(NUMBER_4))           &kp MINUS         &kp H        &kp J  &kp K      &kp L    &kp SQT
-&kp Z    &kp X                    &kp C       &kp V                        &kp B        &kp LEFT_SHIFT                 &kp LEFT_COMMAND  &kp N        &kp M  &kp COMMA  &kp DOT  &kp SLASH
-&kp TAB  &mt LEFT_CONTROL ESCAPE  &kp LC(UP)  &lt_to_layer_0 6 LANGUAGE_1  &lt 2 SPACE  &lt_to_layer_0 4 LANGUAGE_2    &kp BACKSPACE     &lt 1 ENTER                             &to 3
+&kp Q    &kp W             &kp E       &kp R             &kp T                                                  &kp Y        &kp U  &lt 5 I    &kp O    &kp P
+&kp A    &kp S             &kp D       &kp F             &kp G        &kp LC(LG(NUMBER_4))    &kp MINUS         &kp H        &kp J  &kp K      &kp L    &kp SQT
+&kp Z    &kp X             &kp C       &kp V             &kp B        &kp LEFT_SHIFT          &kp LEFT_COMMAND  &kp N        &kp M  &kp COMMA  &kp DOT  &kp SLASH
+&kp TAB  &kp LEFT_CONTROL  &kp LC(UP)  &lt 6 LANGUAGE_1  &lt 2 SPACE  &lt 4 LANGUAGE_2        &kp BACKSPACE     &lt 1 ENTER                             &to 3
             >;
         };
 
@@ -103,10 +88,10 @@
 
         ARROW {
             bindings = <
-&kp ESCAPE        &none             &none         &none   &none                     &kp HOME        &none           &kp UP_ARROW    &none            &none
-&kp LEFT_CONTROL  &kp LEFT_COMMAND  &kp LEFT_ALT  &none   &none   &none     &none   &kp END         &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &none
-&none             &none             &none         &none   &none   &none     &none   &none           &none           &none           &none            &none
-&none             &none             &none         &trans  &trans  &trans    &trans  &kp LEFT_SHIFT                                                   &trans
+&kp ESCAPE        &none             &none         &none   &none                                    &kp HOME        &none           &kp UP_ARROW    &none            &none
+&kp LEFT_CONTROL  &kp LEFT_COMMAND  &kp LEFT_ALT  &none   &none   &kp C_VOLUME_UP      &none       &kp END         &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &none
+&none             &none             &none         &none   &none   &kp C_VOLUME_DOWN    &kp K_MUTE  &none           &none           &none           &none            &none
+&none             &none             &none         &trans  &trans  &trans               &trans      &kp LEFT_SHIFT                                                   &trans
             >;
         };
 
@@ -130,10 +115,10 @@
 
         win {
             bindings = <
-&kp Q      &kp W     &kp E             &kp R                        &kp T                                                         &kp Y        &kp U  &lt 5 I    &kp O    &kp P
-&kp A      &kp S     &kp D             &kp F                        &kp G        &kp PRINTSCREEN                &kp LGUI          &kp H        &kp J  &kp K      &kp L    &kp SQT
-&kp Z      &kp X     &kp C             &kp V                        &kp B        &kp LEFT_SHIFT                 &kp LEFT_CONTROL  &kp N        &kp M  &kp COMMA  &kp DOT  &kp FSLH
-&kp LCTRL  &kp LGUI  &kp LA(LEFT_WIN)  &lt_to_layer_0 6 LANGUAGE_1  &lt 2 SPACE  &lt_to_layer_0 1 LANGUAGE_2    &kp BSPC          &lt 4 ENTER                             &to 3
+&kp Q    &kp W         &kp E             &kp R             &kp T                                              &kp Y        &kp U  &lt 5 I    &kp O    &kp P
+&kp A    &kp S         &kp D             &kp F             &kp G        &kp PRINTSCREEN     &kp MINUS         &kp H        &kp J  &kp K      &kp L    &kp SQT
+&kp Z    &kp X         &kp C             &kp V             &kp B        &kp LEFT_SHIFT      &kp LEFT_CONTROL  &kp N        &kp M  &kp COMMA  &kp DOT  &kp FSLH
+&kp TAB  &kp LEFT_WIN  &kp LA(LEFT_WIN)  &lt 6 LANGUAGE_1  &lt 2 SPACE  &lt 4 LANGUAGE_2    &kp BSPC          &lt 1 ENTER                             &to 3
             >;
         };
     };
